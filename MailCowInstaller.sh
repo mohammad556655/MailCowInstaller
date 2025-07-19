@@ -4,6 +4,8 @@ set -e
 
 # Optional: Update & install dependencies
 echo "[+] Installing dependencies..."
+curl -sSL https://get.docker.com/ | CHANNEL=stable sh
+systemctl enable --now docker
 apt update && apt install  docker-compose-plugin -y
 
 
